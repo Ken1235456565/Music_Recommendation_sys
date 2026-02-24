@@ -87,9 +87,9 @@ Sparse representation is not an optimization — it is a prerequisite for the pr
 
 | Format | Row Slicing | Column Slicing | Random Access | MPI Communication |
 |--------|-------------|----------------|---------------|-------------------|
-| CSR    | ✅ Native   | ❌ Requires conversion | ❌ Slow | High (row blocks map directly) |
-| CSC    | ❌ Requires conversion | ✅ Native | ❌ Slow | High (column blocks) |
-| COO    | ⚠️ Needs sort | ⚠️ Needs sort | ❌ Slow | Low (coordinate pairs, high redundancy) |
+| CSR    |  Native   |  Requires conversion |  Slow | High (row blocks map directly) |
+| CSC    |  Requires conversion |  Native |  Slow | High (column blocks) |
+| COO    |  Needs sort |  Needs sort |  Slow | Low (coordinate pairs, high redundancy) |
 
 ALS iterates by fixing item vectors and scanning all songs rated by a given user — a **row-access pattern** that makes CSR the natural choice.
 
